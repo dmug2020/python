@@ -24,7 +24,13 @@ def get_dish_fromfile():
 
 get_dish_fromfile()
 
-cook_book = {
+
+
+def get_shop_list_dishes(dishes, person_count):
+ """
+ Принимает список блюд из cook_book и количество персон для кого мы будем готовить и добавляет в словарь shop_items
+ """
+  cook_book = {
   'Омлет': [
     {'ingridient_name': 'Яйцо', 'quantity': 2, 'measure': 'шт.'},
     {'ingridient_name': 'Молоко', 'quantity': 100, 'measure': 'мл'},
@@ -42,11 +48,6 @@ cook_book = {
     {'ingridient_name': 'Сыр гауда', 'quantity': 100, 'measure': 'г'},
     ]
   }
-
-def get_shop_list_dishes(dishes, person_count):
- """
- Принимает список блюд из cook_book и количество персон для кого мы будем готовить и добавляет в словарь shop_items
- """
   shop_items = {}
   for dish in cook_book:
     for ingredients in cook_book[dish]:
